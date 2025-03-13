@@ -50,10 +50,9 @@ export default function ProjectCard({
         <div className="flex gap-3">
           {githubUrl && (
             <Button
-              variant="outline"
               size="sm"
               asChild
-              className="transition-colors duration-300 hover:border-emerald-500 hover:text-emerald-400"
+              className="bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300"
             >
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
@@ -63,7 +62,7 @@ export default function ProjectCard({
           )}
 
           {demoUrl && (
-            <Button size="sm" asChild className="bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300">
+            <Button size="sm" asChild className="bg-zinc-700 hover:bg-zinc-600 transition-colors duration-300">
               <a href={demoUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Demo
@@ -75,4 +74,3 @@ export default function ProjectCard({
     </div>
   )
 }
-

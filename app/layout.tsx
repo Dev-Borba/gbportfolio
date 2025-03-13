@@ -1,14 +1,13 @@
-import type React from "react"
-import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Currículo de Gabriel Borba",
-  description: "Baixe o currículo de Gabriel Borba em formato PDF",
-    generator: 'v0.dev'
+  title: "Gabriel Borba - Desenvolvedor Full Stack",
+  description: "Portfólio de Gabriel Borba - Desenvolvedor Full Stack especializado em criar experiências digitais excepcionais",
+  generator: 'Next.js'
 }
 
 export default function RootLayout({
@@ -17,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" className="scroll-smooth">
+      <body className={`${inter.className} min-h-screen bg-black`}>
+        {children}
+      </body>
     </html>
   )
 }
-
-
-
-import './globals.css'

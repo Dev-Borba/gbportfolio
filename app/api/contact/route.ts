@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     const { name, email, message } = messageSchema.parse(body)
 
     // Salvar a mensagem no banco de dados
-    await saveMessage(name, email, message)
+    saveMessage(name, email, message)
 
     return NextResponse.json({
       success: true,
@@ -45,4 +45,3 @@ export async function POST(req: Request) {
     )
   }
 }
-

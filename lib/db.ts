@@ -1,19 +1,15 @@
-import { Database } from "sqlite3"
-import { open } from "sqlite"
+import Database from 'better-sqlite3';
 
 // Função para inicializar o banco de dados
-async function openDb() {
-  return open({
-    filename: "./messages.db", // Nome do arquivo do banco de dados
-    driver: Database,
-  })
+function openDb() {
+  return new Database("./messages.db", { verbose: console.log })
 }
 
 // Função para criar a tabela de mensagens se ela não existir
-export async function initializeDatabase() {
-  const db = await openDb()
+export function initializeDatabase() {
+  const db = openDb()
 
-  await db.exec(`
+  db.exec(`
     CREATE TABLE IF NOT EXISTS messages (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
@@ -23,26 +19,26 @@ export async function initializeDatabase() {
     )
   `)
 
-  await db.close()
+  db.close()
 }
 
 // Função para salvar uma nova mensagem
-export async function saveMessage(name: string, email: string, message: string) {
-  const db = await openDb()
+export function saveMessage(name: string, email: string, message: string) {
+  const db = openDb()
 
-  const result = await db.run("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)", [name, email, message])
+  const stmt = db.prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)")
+  const result = stmt.run(name, email, message)
 
-  await db.close()
+  db.close()
   return result
 }
 
 // Função para buscar todas as mensagens
-export async function getAllMessages() {
-  const db = await openDb()
+export function getAllMessages() {
+  const db = openDb()
 
-  const messages = await db.all("SELECT * FROM messages ORDER BY created_at DESC")
+  const messages = db.prepare("SELECT * FROM messages ORDER BY created_at DESC").all()
 
-  await db.close()
+  db.close()
   return messages
 }
-

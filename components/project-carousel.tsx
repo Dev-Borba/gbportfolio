@@ -18,6 +18,8 @@ interface ProjectCarouselProps {
   className?: string
 }
 
+type VisibleProject = Project | { project: Project; position: number }
+
 export default function ProjectCarousel({ projects, className = "" }: ProjectCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
@@ -111,7 +113,9 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
             </div>
           ) : (
             // Desktop: mostrar 3 projetos com efeito de carrossel
-            getVisibleProjects().map(({ project, position }) => {
+            getVisibleProjects().map((item) => {
+              const project = 'project' in item ? item.project : item
+              const position = 'position' in item ? item.position : 0
               const index = (activeIndex + position + projects.length) % projects.length
 
               return (
@@ -154,4 +158,3 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
     </div>
   )
 }
-
