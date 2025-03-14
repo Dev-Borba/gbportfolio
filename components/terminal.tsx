@@ -61,14 +61,14 @@ export default function Terminal() {
     },
     {
       id: "taskapp",
-      name: "Task Management App",
-      url: "https://github.com/Dev-Borba/taskapp",
+      name: "Go React",
+      url: "https://github.com/Dev-Borba/projeto_go_react",
       description: "Aplicativo de gerenciamento de tarefas com recursos de arrastar e soltar",
     },
     {
       id: "portfolio",
       name: "Portfolio Website",
-      url: "https://github.com/Dev-Borba/portfolio",
+      url: "https://github.com/Dev-Borba/gbportfolio",
       description: "Site de portfólio minimalista e responsivo",
     },
   ]

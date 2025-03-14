@@ -68,7 +68,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Olá, sou o<span className="text-emerald-500">Gabriel Borba</span>
+              Olá, sou o <span className="text-emerald-500">Gabriel Borba</span>
             </h1>
             <p className="text-xl md:text-2xl text-zinc-400 mb-8">
               Desenvolvedor Full Stack especializado em criar experiências digitais excepcionais

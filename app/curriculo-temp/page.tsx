@@ -61,7 +61,14 @@ export default function CurriculoTemp() {
                 <li>
                   <div className="flex flex-col">
                     <span className="text-emerald-300 text-sm font-medium">Email:</span>
-                    <span className="text-zinc-300">grdborba@gmail.com</span>
+                    <a
+                      href="mailto:grdborba@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zinc-300 hover:text-emerald-400 transition-colors"
+                    >
+                      grdborba@gmail.com
+                    </a>
                   </div>
                 </li>
                 <li>
@@ -193,11 +200,11 @@ export default function CurriculoTemp() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
-                    Inglês
+                    
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
-                    Espanhol
+                    
                   </li>
                 </ul>
               </div>
