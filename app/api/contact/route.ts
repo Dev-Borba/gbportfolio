@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { saveMessage } from "@/lib/db"
 import { z } from "zod"
 
+export const dynamic = 'force-dynamic'
+
 // Schema de validação
 const messageSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
@@ -17,7 +19,7 @@ export async function POST(req: Request) {
     const { name, email, message } = messageSchema.parse(body)
 
     // Salvar a mensagem no banco de dados
-    saveMessage(name, email, message)
+    await saveMessage(name, email, message)
 
     return NextResponse.json({
       success: true,

@@ -1,44 +1,56 @@
-import Database from 'better-sqlite3';
+import { kv } from '@vercel/kv'
 
-// Função para inicializar o banco de dados
-function openDb() {
-  return new Database("./messages.db", { verbose: console.log })
-}
-
-// Função para criar a tabela de mensagens se ela não existir
-export function initializeDatabase() {
-  const db = openDb()
-
-  db.exec(`
-    CREATE TABLE IF NOT EXISTS messages (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT NOT NULL,
-      email TEXT NOT NULL,
-      message TEXT NOT NULL,
-      created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-    )
-  `)
-
-  db.close()
+export interface Message extends Record<string, unknown> {
+  id: string
+  name: string
+  email: string
+  message: string
+  created_at: string
+  read: boolean
 }
 
 // Função para salvar uma nova mensagem
-export function saveMessage(name: string, email: string, message: string) {
-  const db = openDb()
+export async function saveMessage(name: string, email: string, message: string) {
+  const id = Date.now().toString()
+  const newMessage = {
+    id,
+    name,
+    email,
+    message,
+    created_at: new Date().toISOString(),
+    read: false
+  } as const
 
-  const stmt = db.prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)")
-  const result = stmt.run(name, email, message)
-
-  db.close()
-  return result
+  await kv.hset(`message:${id}`, newMessage)
+  await kv.lpush('messages', id)
+  
+  return newMessage
 }
 
 // Função para buscar todas as mensagens
-export function getAllMessages() {
-  const db = openDb()
+export async function getAllMessages(): Promise<Message[]> {
+  const messageIds = await kv.lrange('messages', 0, -1)
+  if (!messageIds?.length) return []
+  
+  const messages = await Promise.all(
+    messageIds.map(async (id) => {
+      const message = await kv.hgetall<Message>(`message:${id}`)
+      return message
+    })
+  )
 
-  const messages = db.prepare("SELECT * FROM messages ORDER BY created_at DESC").all()
+  return messages.filter((msg): msg is Message => msg !== null)
+}
 
-  db.close()
-  return messages
+// Função para marcar mensagem como lida
+export async function markMessageAsRead(id: string) {
+  await kv.hset(`message:${id}`, { read: true } as const)
+  return true
+}
+
+// Função para excluir uma mensagem
+export async function deleteMessage(id: string) {
+  await kv.del(`message:${id}`)
+  await kv.lrem('messages', 0, id)
+  return true
 }
