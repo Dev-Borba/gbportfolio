@@ -121,7 +121,7 @@ export default function Home() {
                 title: "Portfolio Website",
                 description:
                   "Site de portfólio minimalista e responsivo para designers e desenvolvedores.",
-                image: "/placeholder.svg?height=400&width=600",
+                image: "/portfolio.png?height=400&width=600",
                 tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "Zod"],
                 githubUrl: "https://github.com/Dev-Borba/gbportfolio",
                 demoUrl: "https://gbportfolio-beige.vercel.app/",
@@ -175,8 +175,7 @@ export default function Home() {
               <div className="space-y-4 text-zinc-300 text-justify">
                 <p>
                   Sou um desenvolvedor full stack apaixonado por criar soluções digitais elegantes e funcionais.
-                  Atualmente trabalho como Técnico de TI na Prodam, onde adquiri experiência em suporte técnico e
-                  infraestrutura.
+                  Atualmente estou tentando me tornar um desenvolvedor back-end, mas ainda estou aprendendo muito sobre o assunto.
                 </p>
                 <p>
                   Estou cursando Análise e Desenvolvimento de Sistemas na Impacta e tenho investido constantemente em
