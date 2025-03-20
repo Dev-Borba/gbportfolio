@@ -240,11 +240,14 @@ export default function CurriculoTemp() {
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">Go + React da Rocketseat</p>
                 <p className="text-zinc-400 text-sm">ago 2024</p>
-                <p className="mt-2 text-zinc-300">
-                  Desenvolvimento de uma aplicação front-end em ReactJS, aplicação dos conceitos de Propriedades,
-                  Estados e Componentes, actions do React19, tipagem com Typescript, tooling com Vite, interface
-                  responsiva com TailwindCSS, consumo de API GO utilizando tanto métodos HTTP com TanStack Query quanto
-                  comunicação em tempo real com WebSockets, notificação com Sonner.
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Desenvolvimento de uma aplicação front-end em ReactJS, aplicação dos conceitos de Propriedades, 
+                  Estados e Componentes, actions do React19,tipagem com Typescript,tooling com Vite, interface 
+                  responsiva com TailwindCSS, consumo de API GO utilizando tanto métodos HTTP com TanStack Query 
+                  quanto comunicação em tempo real com WebSockets, notificação com Sonner. Criação de API back-end 
+                  web utilizando Go com Gorilla Websockets, migrations e Go-Chi como router.Boas práticas no 
+                  desenvolvimento de uma API, estrutura de aplicações, HTTP REST idiomático, exclusões mútuas e 
+                  programação concurrent-safe.
                 </p>
               </div>
 
@@ -252,75 +255,141 @@ export default function CurriculoTemp() {
                 <p className="font-bold text-emerald-300">NLW Pocket: Javascript - Full-stack Intermediário</p>
                 <p className="text-zinc-400 text-sm">set 2024</p>
                 <p className="mt-2 text-zinc-300 text-justify">
-                Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST,
-                utilizando TypeScript, Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker
-                e Zod para validação de dados. Desenvolvimento de uma aplicação front-end em ReactJS, aplicação
-                dos conceitos de Propriedades, Estados e Componentes, tipagem com Typescript, tooling com Vite, 
-                interface responsiva com TailwindCSS, consumo de API Node.js, gerenciamento de dados assíncronos 
-                com TanStack Query.
+                  Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST,
+                  utilizando TypeScript, Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker
+                  e Zod para validação de dados. Desenvolvimento de uma aplicação front-end em ReactJS, aplicação
+                  dos conceitos de Propriedades, Estados e Componentes, tipagem com Typescript, tooling com Vite, 
+                  interface responsiva com TailwindCSS, consumo de API Node.js, gerenciamento de dados assíncronos 
+                  com TanStack Query.
                 </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">Segurança da Informação</p>
                 <p className="text-zinc-400 text-sm">jul 2024</p>
-                <p className="mt-2 text-zinc-300">Treinamento de Segurança da Informação</p>
+                <p className="mt-2 text-zinc-300">Participação do treinamento de Segurança da Informação.</p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">Frontend Jr da Rocketseat</p>
                 <p className="text-zinc-400 text-sm">jun 2024</p>
-                <p className="mt-2 text-zinc-300">ReactJS, Vite, styled-components, rotas, navegação</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Fundamentos de ReactJS; Vite; styled-components; Fragment; Adicionar fontes personalizadas; 
+                  Components; Props; Rotas; Navegação; Estruturar pastas e arquivos no ReactJS; Executar um projeto 
+                  ReactJS.
+                </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">Backend Jr da Rocketseat</p>
                 <p className="text-zinc-400 text-sm">mai 2024</p>
-                <p className="mt-2 text-zinc-300">Node.js, Express, APIs, bancos de dados relacionais, SQL</p>
-              </div>
-
-              <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
-                <p className="font-bold text-emerald-300">NLW Unite - Python/Node.js/Fullstack da Rocketseat</p>
-                <p className="text-zinc-400 text-sm">abr 2024</p>
-                <p className="mt-2 text-zinc-300">
-                  Python, Flask, Node.js, TypeScript, Fastify, Prisma, HTML, CSS, JavaScript
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Criação de APIs; Node.js; Express; rotas; métodos HTTP; Middlewares; bancos de dados relacionais; 
+                  comandos SQL; SQLite; comandos DML; comandos DDL; gerenciadores de dependências; criptografia de dados; 
+                  tratamento de erros.
                 </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
-                <p className="font-bold text-emerald-300">Git e Github básico da Rocketseat</p>
+                <p className="font-bold text-emerald-300">NLW Unite - Python</p>
+                <p className="text-zinc-400 text-sm">abr 2024</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Desenvolvimento de uma aplicação de cadastro e gerenciamento de eventos. Utilizando Python como 
+                  linguagem de programação, Flask como framework web, preparação de ambiente e boas práticas de 
+                  projeto com Virtualenv, Pylint e versionamento de código usando pre-commit, boas práticas de 
+                  código com entidades, services e repositories + testes automatizados com Pytest.
+                </p>
+              </div>
+
+              <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
+                <p className="font-bold text-emerald-300">NLW Unite - Nodejs</p>
+                <p className="text-zinc-400 text-sm">abr 2024</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST, 
+                  utilizando TypeScript, Fastify como framework, integração do Prisma ORM + SQLite e Zod para 
+                  validação de dados.
+                </p>
+              </div>
+
+              <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
+                <p className="font-bold text-emerald-300">NLW Unite - Fullstack</p>
+                <p className="text-zinc-400 text-sm">abr 2024</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Desenvolvimento de uma aplicação front-end em HTML, CSS e JavaScript, conceitos teóricos dos 
+                  fundamentos da programação, criação de estrutura base com HTML, estilização com CSS, aplicação 
+                  de lógica de programação com o JavaScript , IA para gerar a lista dos participantes, Day.js para 
+                  lidar com datas e uso do GitHub e GitHub Pages para publicar a aplicação.
+                </p>
+              </div>
+
+
+              <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
+                <p className="font-bold text-emerald-300">Git e Github básico</p>
                 <p className="text-zinc-400 text-sm">out 2023</p>
-                <p className="mt-2 text-zinc-300">Git, GitHub, controle de versão</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Introdução ao Git; sistemas de controle de versão; HEAD no git; comandos git básicos; git diff; 
+                  git --amend; git restore; GitHub; repositórios no GitHub; .gitignore e .gitkeep; git clone; git pull; 
+                  criação e atualização de README.md.
+                </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
-                <p className="font-bold text-emerald-300">Javascript da Rocketseat</p>
+                <p className="font-bold text-emerald-300">Javascript</p>
                 <p className="text-zinc-400 text-sm">set 2023</p>
-                <p className="mt-2 text-zinc-300">JavaScript, DOM, Clean Code, SPA, POO, APIs</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Tipos de dados, operadores, estruturas de repetição, condicionais, funções, DOM, callback, 
+                  princípios de Clean Code, modularização, escopo, padrão factory, injeção de dependências, 
+                  manipulação de arquivos, SPA, eventos, rotas, assincronismo, conceitos da POO, desestruturação, 
+                  chamado de API, imutabilidade.
+                </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
-                <p className="font-bold text-emerald-300">HTML e CSS da Rocketseat</p>
+                <p className="font-bold text-emerald-300">HTML e CSS</p>
                 <p className="text-zinc-400 text-sm">jun 2023</p>
-                <p className="mt-2 text-zinc-300">HTML, CSS, semântica, acessibilidade, responsividade</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  Estrutura da web, estrutura do HTML, tags HTML, semântica, acessibilidade, conceitos de CSS,
+                  seletores CSS, animações em CSS, grid e flexbox, formulários, inputs, variáveis em CSS, 
+                  responsividade.
+                </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">AI for Devs</p>
                 <p className="text-zinc-400 text-sm">ago 2023</p>
-                <p className="mt-2 text-zinc-300">Uso da inteligência artificial em programação</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                Participação do evento de IA para Devs sobre o uso da inteligencia artificial em programação.
+                </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">TOP365</p>
                 <p className="text-zinc-400 text-sm">ago 2023</p>
-                <p className="mt-2 text-zinc-300">Planner, Power Apps, Power Automate, Power BI, Office 365</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  - Gestão de Demandas com Planner e To-Do;
+                  - Low-Code de Formulários Personalizados (Power Apps);
+                  - Low-Code Adotando Inteligência (Power Automate) / Aprovações e Assinaturas Digitais;
+                  - Low-Code Insights (Power BI);
+                  - Papel da Nuvem no cenário híbrido de trabalho e Visão geral sobre os aplicativos de produtividade, 
+                    comunicação e colaboração do Office 365;
+                  - Visão geral sobre os aplicativos de produtividade, comunicação e colaboração do Office 365 [parte 2];
+                  - Gestão Eletrônica de Documentos;
+                  - Portais de Processos Sharepoint;
+                </p>
               </div>
 
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">Microsoft Excel Basic</p>
                 <p className="text-zinc-400 text-sm">mar 2023</p>
-                <p className="mt-2 text-zinc-300">Excel, fórmulas, funções, formatação, gráficos</p>
+                <p className="mt-2 text-zinc-300 text-justify">
+                  - Editar dados no Excel;
+                  - Formatar dados no Excel;
+                  - Reconhecer a diferença entre função e fórmula;
+                  - Utilizar as fórmulas de soma, multiplicação divisão e porcentagem;
+                  - Aplicar as funções básicas do Excel;
+                  - Formatar planilhas Excel a partir de condicionais;
+                  - Criar gráficos.
+                </p>
               </div>
             </div>
           </div>
