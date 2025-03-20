@@ -47,7 +47,7 @@ export default function CurriculoTemp() {
                 <p className="mb-2 text-zinc-300">
                   Busco oportunidades de crescimento profissional e novos desafios na área de tecnologia.
                 </p>
-                <p className="text-zinc-300">
+                <p className="text-zinc-300 text-justify">
                   Busco o crescimento profissional, contribuindo para o sucesso da organização como um todo com
                   motivação, dedicação e sempre aberto a novos aprendizados. Tenho facilidade em trabalhar em equipe e
                   ficarei grato com a oportunidade de fazer parte dessa conceituada empresa.
@@ -129,7 +129,7 @@ export default function CurriculoTemp() {
                 <p className="font-bold">Técnico de TI</p>
                 <p className="text-emerald-300">Prodam, São Paulo, Brasil</p>
                 <p className="text-zinc-400">nov 2022 - nov 2024</p>
-                <p className="mt-2 text-zinc-300">
+                <p className="mt-2 text-zinc-300 text-justify">
                   Atividades e rotinas de microinformática em geral. Instalação, configuração e atualização dos Sistemas
                   Operacionais Windows professional/ Linux e softwares. Instalação e configuração de impressoras
                   departamentais. Suporte técnico ao cliente presencial e remoto.
