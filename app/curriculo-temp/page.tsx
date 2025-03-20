@@ -252,7 +252,12 @@ export default function CurriculoTemp() {
                 <p className="font-bold text-emerald-300">NLW Pocket: Javascript - Full-stack Intermediário</p>
                 <p className="text-zinc-400 text-sm">set 2024</p>
                 <p className="mt-2 text-zinc-300">
-                  Node.js, TypeScript, Fastify, DrizzleORM, PostgreSQL, Docker, ReactJS, TailwindCSS
+                Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST,
+                utilizando TypeScript, Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker
+                e Zod para validação de dados. Desenvolvimento de uma aplicação front-end em ReactJS, aplicação
+                dos conceitos de Propriedades, Estados e Componentes, tipagem com Typescript, tooling com Vite, 
+                interface responsiva com TailwindCSS, consumo de API Node.js, gerenciamento de dados assíncronos 
+                com TanStack Query.
                 </p>
               </div>
 
