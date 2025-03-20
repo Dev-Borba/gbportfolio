@@ -198,6 +198,10 @@ export default function CurriculoTemp() {
                     <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
                     Português (Nativo)
                   </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                    Inglês (Básico)
+                  </li>
                 </ul>
               </div>
               <div>
