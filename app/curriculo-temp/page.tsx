@@ -382,12 +382,12 @@ export default function CurriculoTemp() {
                 <p className="font-bold text-emerald-300">Microsoft Excel Basic</p>
                 <p className="text-zinc-400 text-sm">mar 2023</p>
                 <p className="mt-2 text-zinc-300 text-justify whitespace-pre-line">
-                  - Editar dados no Excel;
-                  - Formatar dados no Excel;
-                  - Reconhecer a diferença entre função e fórmula;
-                  - Utilizar as fórmulas de soma, multiplicação divisão e porcentagem;
-                  - Aplicar as funções básicas do Excel;
-                  - Formatar planilhas Excel a partir de condicionais;
+                  - Editar dados no Excel;<br>
+                  - Formatar dados no Excel;<br>
+                  - Reconhecer a diferença entre função e fórmula;<br>
+                  - Utilizar as fórmulas de soma, multiplicação divisão e porcentagem;<br>
+                  - Aplicar as funções básicas do Excel;<br>
+                  - Formatar planilhas Excel a partir de condicionais;<br>
                   - Criar gráficos.
                 </p>
               </div>
