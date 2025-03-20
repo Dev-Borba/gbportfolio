@@ -365,7 +365,7 @@ export default function CurriculoTemp() {
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">TOP365</p>
                 <p className="text-zinc-400 text-sm">ago 2023</p>
-                <p className="mt-2 text-zinc-300 text-justify">
+                <p className="mt-2 text-zinc-300 text-justify whitespace-pre-line">
                   - Gestão de Demandas com Planner e To-Do;
                   - Low-Code de Formulários Personalizados (Power Apps);
                   - Low-Code Adotando Inteligência (Power Automate) / Aprovações e Assinaturas Digitais;
@@ -381,7 +381,7 @@ export default function CurriculoTemp() {
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">Microsoft Excel Basic</p>
                 <p className="text-zinc-400 text-sm">mar 2023</p>
-                <p className="mt-2 text-zinc-300 text-justify">
+                <p className="mt-2 text-zinc-300 text-justify whitespace-pre-line">
                   - Editar dados no Excel;
                   - Formatar dados no Excel;
                   - Reconhecer a diferença entre função e fórmula;
