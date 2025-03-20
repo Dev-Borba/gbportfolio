@@ -118,13 +118,13 @@ export default function Home() {
           <ProjectCarousel
             projects={[
               {
-                title: "E-commerce Platform",
+                title: "Portfolio Website",
                 description:
-                  "Uma plataforma de comércio eletrônico completa com pagamentos, gerenciamento de produtos e painel de administração.",
+                  "Site de portfólio minimalista e responsivo para designers e desenvolvedores.",
                 image: "/placeholder.svg?height=400&width=600",
-                tags: ["React", "Node.js", "MongoDB", "Stripe"],
-                githubUrl: "https://github.com/username/ecommerce",
-                demoUrl: "https://demo-ecommerce.vercel.app",
+                tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "Zod"],
+                githubUrl: "https://github.com/Dev-Borba/gbportfolio",
+                demoUrl: "https://gbportfolio-beige.vercel.app/",
               },
               {
                 title: "Task Management App",
@@ -136,7 +136,7 @@ export default function Home() {
                 demoUrl: "https://demo-taskapp.vercel.app",
               },
               {
-                title: "Portfolio Website",
+                title: "Test",
                 description: "Site de portfólio minimalista e responsivo para designers e desenvolvedores.",
                 image: "/placeholder.svg?height=400&width=600",
                 tags: ["Next.js", "Tailwind CSS", "Framer Motion"],

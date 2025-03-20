@@ -157,7 +157,7 @@ export default function Terminal() {
             <p>Git & Github, Windows, Linux Ubuntu, Kali Linux</p>
 
             <p className="font-bold text-emerald-400 mt-3">Idiomas:</p>
-            <p>Português (Nativo), Inglês, Espanhol</p>
+            <p>Português (Nativo)</p>
 
             <p className="font-bold text-emerald-400 mt-3">Soft Skills:</p>
             <p>Focado, Dinâmico, Resiliente, Adaptabilidade, Pontualidade, Confiança</p>
