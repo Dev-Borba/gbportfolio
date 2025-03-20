@@ -251,7 +251,7 @@ export default function CurriculoTemp() {
               <div className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700">
                 <p className="font-bold text-emerald-300">NLW Pocket: Javascript - Full-stack Intermediário</p>
                 <p className="text-zinc-400 text-sm">set 2024</p>
-                <p className="mt-2 text-zinc-300">
+                <p className="mt-2 text-zinc-300 text-justify">
                 Desenvolvimento de uma aplicação back-end em Node.js, aplicação dos conceitos de API REST,
                 utilizando TypeScript, Fastify como framework, integração do DrizzleORM + PostgreSQL, Docker
                 e Zod para validação de dados. Desenvolvimento de uma aplicação front-end em ReactJS, aplicação
