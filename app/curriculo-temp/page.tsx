@@ -366,15 +366,22 @@ export default function CurriculoTemp() {
                 <p className="font-bold text-emerald-300">TOP365</p>
                 <p className="text-zinc-400 text-sm">ago 2023</p>
                 <p className="mt-2 text-zinc-300 text-justify whitespace-pre-line">
-                  - Gestão de Demandas com Planner e To-Do;
-                  - Low-Code de Formulários Personalizados (Power Apps);
-                  - Low-Code Adotando Inteligência (Power Automate) / Aprovações e Assinaturas Digitais;
-                  - Low-Code Insights (Power BI);
-                  - Papel da Nuvem no cenário híbrido de trabalho e Visão geral sobre os aplicativos de produtividade,
-                  comunicação e colaboração do Office 365;
-                  - Visão geral sobre os aplicativos de produtividade, comunicação e colaboração do Office 365 [parte 2];
-                  - Gestão Eletrônica de Documentos;
-                  - Portais de Processos Sharepoint;
+                <>- Gestão de Demandas com Planner e To-Do;</>
+                <br />
+                <>- Low-Code de Formulários Personalizados (Power Apps);</>
+                <br />
+                <>- Low-Code Adotando Inteligência (Power Automate) / Aprovações e Assinaturas Digitais;</>
+                <br />
+                <>- Low-Code Insights (Power BI);</>
+                <br />
+                <>- Papel da Nuvem no cenário híbrido de trabalho e Visão geral sobre os aplicativos de produtividade,
+                  comunicação e colaboração do Office 365;</>
+                <br />
+                <>- Visão geral sobre os aplicativos de produtividade, comunicação e colaboração do Office 365 [parte 2];</>
+                <br />
+                <>- Gestão Eletrônica de Documentos;</>
+                <br />
+                <>- Portais de Processos Sharepoint;</>
                 </p>
               </div>
 
@@ -396,8 +403,8 @@ export default function CurriculoTemp() {
                   <br />
                   <>- Criar gráficos.</>
                 </p>
-
               </div>
+
             </div>
           </div>
         </div>
