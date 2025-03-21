@@ -105,22 +105,22 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
   return (
     <div className={`relative w-full max-w-7xl mx-auto ${className}`}>
       {/* Carousel Container com espaço extra para as setas */}
-      <div className="relative h-[420px] overflow-visible px-12">
+      <div className="relative h-[420px] overflow-visible">
         {/* Navigation Buttons */}
         <button
           onClick={previousProject}
-          className="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800/80 p-2 text-white shadow-lg transition-all hover:bg-emerald-600"
+          className="absolute -left-12 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800/80 p-3 text-white shadow-lg transition-all hover:bg-emerald-600"
           aria-label="Projeto anterior"
         >
-          <ChevronLeft className="h-6 w-6" />
+          <ChevronLeft className="h-7 w-7" />
         </button>
 
         <button
           onClick={nextProject}
-          className="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800/80 p-2 text-white shadow-lg transition-all hover:bg-emerald-600"
+          className="absolute -right-12 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800/80 p-3 text-white shadow-lg transition-all hover:bg-emerald-600"
           aria-label="Próximo projeto"
         >
-          <ChevronRight className="h-6 w-6" />
+          <ChevronRight className="h-7 w-7" />
         </button>
 
         {/* Projects */}
