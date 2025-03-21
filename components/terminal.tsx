@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useEffect, useState, useRef, useCallback } from "react"
 import { Github, Linkedin, Mail, ExternalLink, FileText } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 type CommandResult = {
   output: string | React.ReactNode
@@ -19,6 +20,7 @@ export default function Terminal() {
   const [initialLoad, setInitialLoad] = useState(true)
   const inputRef = useRef<HTMLInputElement>(null)
   const terminalRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   // Apenas o comando help será executado automaticamente
   const initialCommands = ["help"]
@@ -623,15 +625,25 @@ export default function Terminal() {
         {/* Input Line */}
         <form onSubmit={handleSubmit} className="flex items-center">
           <span className="text-emerald-500">gabriel@portfolio</span>:<span className="text-blue-400">~</span>$
-          <input
-            ref={inputRef}
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            className="flex-1 bg-transparent border-none outline-none text-white ml-1"
-            autoFocus
-          />
-          {showCursor && inputValue.length === 0 && <span className="text-emerald-400 animate-pulse">▋</span>}
+          <div className="flex items-center ml-2 relative flex-1">
+            {showCursor && inputValue.length === 0 && (
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-5 bg-emerald-500 animate-pulse" />
+            )}
+            <input
+              ref={inputRef}
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              className="flex-1 bg-transparent border-none outline-none text-white pl-0.5"
+              autoFocus
+            />
+            {showCursor && inputValue.length > 0 && (
+              <span 
+                className="absolute bg-emerald-500 w-2 h-5 animate-pulse"
+                style={{ left: `${inputValue.length}ch` }}
+              />
+            )}
+          </div>
         </form>
       </div>
     </div>
