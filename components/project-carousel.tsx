@@ -79,16 +79,8 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
   const getProjectStyles = (position: number) => {
     const baseScale = position === 0 ? 1 : position === -1 || position === 1 ? 0.85 : 0.7
     const baseOpacity = position === 0 ? 1 : position === -1 || position === 1 ? 0.8 : 0.6
-    const baseLeft = (() => {
-      switch (position) {
-        case -2: return "calc(50% - 600px)"
-        case -1: return "calc(50% - 300px)"
-        case 0: return "50%"
-        case 1: return "calc(50% + 300px)"
-        case 2: return "calc(50% + 600px)"
-        default: return "50%"
-      }
-    })()
+    const spacing = 320 // Espaçamento fixo entre os projetos
+    const baseLeft = `calc(50% + ${position * spacing}px)`
 
     return {
       transform: `translate(-50%, -50%) scale(${baseScale})`,
