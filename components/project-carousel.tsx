@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import ProjectCard from "./project-card"
 
 interface Project {
@@ -56,21 +55,18 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
     setTimeout(() => setIsTransitioning(false), 500)
   }
 
-  // Função para avançar automaticamente o carrossel
   useEffect(() => {
     const interval = setInterval(() => {
       nextProject()
-    }, 5000) // Muda a cada 5 segundos
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [activeIndex])
 
-  // Calcular quais projetos mostrar com base no índice ativo
   const getVisibleProjects = () => {
     if (isMobile) {
       return [projects[activeIndex]]
     } else {
-      // Em desktop, mostrar 5 projetos
       const visibleProjects = []
       for (let i = -2; i <= 2; i++) {
         const index = (activeIndex + i + projects.length) % projects.length
@@ -104,29 +100,9 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
 
   return (
     <div className={`relative w-full max-w-7xl mx-auto ${className}`}>
-      {/* Carousel Container com espaço extra para as setas */}
       <div className="relative h-[420px] overflow-visible">
-        {/* Navigation Buttons */}
-        <button
-          onClick={previousProject}
-          className="absolute -left-12 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800/80 p-3 text-white shadow-lg transition-all hover:bg-emerald-600"
-          aria-label="Projeto anterior"
-        >
-          <ChevronLeft className="h-7 w-7" />
-        </button>
-
-        <button
-          onClick={nextProject}
-          className="absolute -right-12 top-1/2 z-20 -translate-y-1/2 rounded-full bg-zinc-800/80 p-3 text-white shadow-lg transition-all hover:bg-emerald-600"
-          aria-label="Próximo projeto"
-        >
-          <ChevronRight className="h-7 w-7" />
-        </button>
-
-        {/* Projects */}
         <div className="relative h-full perspective-1000">
           {isMobile ? (
-            // Mobile: mostrar apenas o projeto ativo
             <div
               className="absolute left-1/2 top-1/2 w-[280px] -translate-x-1/2 -translate-y-1/2 transition-all duration-500"
               key={activeIndex}
@@ -134,7 +110,6 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
               <ProjectCard {...projects[activeIndex]} />
             </div>
           ) : (
-            // Desktop: mostrar 5 projetos com efeito de carrossel
             getVisibleProjects().map((item) => {
               const project = 'project' in item ? item.project : item
               const position = 'position' in item ? item.position : 0
@@ -164,7 +139,6 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
         </div>
       </div>
 
-      {/* Indicators */}
       <div className="mt-4 flex justify-center gap-2">
         {projects.map((_, index) => (
           <button
