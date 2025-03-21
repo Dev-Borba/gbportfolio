@@ -22,17 +22,18 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className={`bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 transition-all duration-300 hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1 h-full ${className}`}
+      className={`group flex flex-col bg-zinc-900 rounded-2xl border border-zinc-800 transition-all duration-300 hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1 h-full ${className}`}
     >
-      <div className="relative h-[140px] overflow-hidden cursor-pointer group">
+      <div className="w-full h-[140px] rounded-t-2xl overflow-hidden">
         <img
           src={image || "/placeholder.svg"}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <div className="p-6">
+
+      <div className="flex-1 p-6 rounded-b-2xl">
         <h3 className="text-lg font-bold mb-2 text-white/90">{title}</h3>
         <p className="text-zinc-400 mb-4 text-sm line-clamp-2">{description}</p>
 
@@ -41,21 +42,21 @@ export default function ProjectCard({
             <span
               key={index}
               className="px-3 py-1 bg-zinc-800/80 text-sm rounded-full text-zinc-300 
-             transition-all duration-300 hover:bg-emerald-500/20 hover:text-emerald-400 hover:scale-105"
+              transition-all duration-300 hover:bg-emerald-500/20 hover:text-emerald-400 hover:scale-105"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex gap-3 mt-auto">
           {githubUrl && (
             <Button
               size="sm"
               asChild
               className="bg-emerald-600 hover:bg-emerald-700 transition-all duration-300 rounded-lg hover:scale-105"
             >
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
                 <Github className="mr-2 h-4 w-4" />
                 Código
               </a>
@@ -68,7 +69,7 @@ export default function ProjectCard({
               asChild 
               className="bg-zinc-700 hover:bg-zinc-600 transition-all duration-300 rounded-lg hover:scale-105"
             >
-              <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+              <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Demo
               </a>
