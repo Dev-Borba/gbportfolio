@@ -104,7 +104,7 @@ export default function Home() {
         {/* Code Background for Projects Section */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1702823605654-YtsTdCGgU15wNd8GJu0jlLYDTyWL6d.jpeg"
+            src="/profile-dark.jpg"
             alt="Code background"
             className="w-full h-full object-cover opacity-20"
           />
