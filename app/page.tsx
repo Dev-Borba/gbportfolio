@@ -191,7 +191,7 @@ export default function Home() {
             <div className="md:w-1/2 flex items-center justify-center">
               <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-emerald-500">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/user-perfil-VGfJm2Pz27iwI93YJeoKVU83EQeTsx.png"
+                  src="/profile-dark.jpg"
                   alt="Gabriel Borba - Desenvolvedor Full Stack"
                   className="w-full h-full object-cover"
                 />
