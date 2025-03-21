@@ -121,7 +121,7 @@ export default function Home() {
                 title: "Portfolio Website",
                 description:
                   "Site de portfólio minimalista e responsivo para designers e desenvolvedores.",
-                image: "/portfolio.png?height=400&width=600&rounded=16",
+                image: "/portfolio.png?height=400&width=600&rounded=true",
                 tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "Zod"],
                 githubUrl: "https://github.com/Dev-Borba/gbportfolio",
                 demoUrl: "https://gbportfolio-beige.vercel.app/",
