@@ -83,7 +83,7 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
   return (
     <div className={`relative w-full max-w-6xl mx-auto ${className}`}>
       {/* Carousel Container com espaço extra para as setas */}
-      <div className="relative h-[380px] overflow-hidden px-12">
+      <div className="relative h-[420px] overflow-visible px-12">
         {/* Navigation Buttons */}
         <button
           onClick={previousProject}
@@ -126,7 +126,7 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
                     ${position === 0 ? "z-10" : "z-0"}
                   `}
                   style={{
-                    transform: "translate(-50%, -50%)",
+                    transform: `translate(-50%, -50%) ${position !== 0 ? 'scale(0.9)' : 'scale(1)'}`,
                     opacity: position === 0 ? 1 : 0.7,
                   }}
                   onClick={() => position !== 0 && goToProject(index)}
