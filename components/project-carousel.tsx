@@ -70,9 +70,9 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
     if (isMobile) {
       return [projects[activeIndex]]
     } else {
-      // Em desktop, mostrar 3 projetos
+      // Em desktop, mostrar 5 projetos
       const visibleProjects = []
-      for (let i = -1; i <= 1; i++) {
+      for (let i = -2; i <= 2; i++) {
         const index = (activeIndex + i + projects.length) % projects.length
         visibleProjects.push({ project: projects[index], position: i })
       }
@@ -80,8 +80,30 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
     }
   }
 
+  const getProjectStyles = (position: number) => {
+    const baseScale = position === 0 ? 1 : position === -1 || position === 1 ? 0.85 : 0.7
+    const baseOpacity = position === 0 ? 1 : position === -1 || position === 1 ? 0.8 : 0.6
+    const baseLeft = (() => {
+      switch (position) {
+        case -2: return "calc(50% - 600px)"
+        case -1: return "calc(50% - 300px)"
+        case 0: return "50%"
+        case 1: return "calc(50% + 300px)"
+        case 2: return "calc(50% + 600px)"
+        default: return "50%"
+      }
+    })()
+
+    return {
+      transform: `translate(-50%, -50%) scale(${baseScale})`,
+      opacity: baseOpacity,
+      left: baseLeft,
+      zIndex: Math.abs(position) === 0 ? 10 : Math.abs(position) === 1 ? 5 : 0
+    }
+  }
+
   return (
-    <div className={`relative w-full max-w-6xl mx-auto ${className}`}>
+    <div className={`relative w-full max-w-7xl mx-auto ${className}`}>
       {/* Carousel Container com espaço extra para as setas */}
       <div className="relative h-[420px] overflow-visible px-12">
         {/* Navigation Buttons */}
@@ -112,22 +134,22 @@ export default function ProjectCarousel({ projects, className = "" }: ProjectCar
               <ProjectCard {...projects[activeIndex]} />
             </div>
           ) : (
-            // Desktop: mostrar 3 projetos com efeito de carrossel
+            // Desktop: mostrar 5 projetos com efeito de carrossel
             getVisibleProjects().map((item) => {
               const project = 'project' in item ? item.project : item
               const position = 'position' in item ? item.position : 0
               const index = (activeIndex + position + projects.length) % projects.length
+              const styles = getProjectStyles(position)
 
               return (
                 <div
                   key={index}
-                  className={`absolute top-1/2 w-[280px] transition-all duration-500 cursor-pointer
-                    ${position === -1 ? "left-[calc(50%-320px)]" : position === 0 ? "left-1/2" : "left-[calc(50%+320px)]"}
-                    ${position === 0 ? "z-10" : "z-0"}
-                  `}
+                  className="absolute top-1/2 w-[280px] transition-all duration-500 cursor-pointer"
                   style={{
-                    transform: `translate(-50%, -50%) ${position !== 0 ? 'scale(0.9)' : 'scale(1)'}`,
-                    opacity: position === 0 ? 1 : 0.7,
+                    transform: styles.transform,
+                    opacity: styles.opacity,
+                    left: styles.left,
+                    zIndex: styles.zIndex
                   }}
                   onClick={() => position !== 0 && goToProject(index)}
                 >
