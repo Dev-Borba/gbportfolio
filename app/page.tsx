@@ -127,21 +127,21 @@ export default function Home() {
                 demoUrl: "https://gbportfolio-beige.vercel.app/",
               },
               {
-                title: "Task Management App",
+                title: "GB Finance Dashboard",
                 description:
-                  "Aplicativo de gerenciamento de tarefas com recursos de arrastar e soltar, notificações e colaboração em equipe.",
-                image: "/placeholder.svg?height=400&width=600",
-                tags: ["Vue.js", "Firebase", "Tailwind CSS"],
-                githubUrl: "https://github.com/username/taskapp",
-                demoUrl: "https://demo-taskapp.vercel.app",
+                  "Um dashboard moderno e intuitivo para gerenciamento de finanças pessoais, desenvolvido com Next.js e Tailwind CSS.",
+                image: "/gb-finance-dashboard.png?height=400&width=600",
+                tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Shadcn UI", "Recharts"],
+                githubUrl: "https://github.com/Dev-Borba/gb-finance-dashboard",
+                demoUrl: "https://gb-finance-dashboard-gamma.vercel.app/",
               },
               {
                 title: "Test",
                 description: "Site de portfólio minimalista e responsivo para designers e desenvolvedores.",
                 image: "/placeholder.svg?height=400&width=600",
                 tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-                githubUrl: "https://github.com/username/portfolio",
-                demoUrl: "https://demo-portfolio.vercel.app",
+                githubUrl: "",
+                demoUrl: "",
               },
               {
                 title: "AI Chat Application",
@@ -149,8 +149,8 @@ export default function Home() {
                   "Aplicação de chat em tempo real com recursos de IA para respostas automáticas e análise de sentimentos.",
                 image: "/placeholder.svg?height=400&width=600",
                 tags: ["React", "OpenAI", "Socket.io", "Express"],
-                githubUrl: "https://github.com/username/ai-chat",
-                demoUrl: "https://demo-ai-chat.vercel.app",
+                githubUrl: "",
+                demoUrl: "",
               },
               {
                 title: "Social Media Dashboard",
@@ -158,8 +158,8 @@ export default function Home() {
                   "Dashboard para análise e gerenciamento de redes sociais com visualizações de dados em tempo real.",
                 image: "/placeholder.svg?height=400&width=600",
                 tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
-                githubUrl: "https://github.com/username/social-dashboard",
-                demoUrl: "https://demo-social-dashboard.vercel.app",
+                githubUrl: "",
+                demoUrl: "",
               },
             ]}
           />
