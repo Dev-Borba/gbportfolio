@@ -47,11 +47,3 @@ npm run dev
 ## 📱 Uso
 
 O site estará disponível em `http://localhost:3000`
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-
-## 📬 Contato
-
-[Adicione suas informações de contato aqui]
